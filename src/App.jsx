@@ -1,8 +1,8 @@
-import AboutMeSection from "./components/AboutMeSection";
 import Footer from "./components/Footer";
-import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
-import ProjectsSection from "./components/ProjectsSection";
+import { Route, Routes } from "react-router-dom";
+import Home from "./routes/Home";
+import Contact from "./routes/Contact";
 
 function App() {
   return (
@@ -12,9 +12,10 @@ function App() {
       </header>
 
       <main>
-        <HeroSection />
-        <ProjectsSection />
-        <AboutMeSection />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/contact' element={<Contact />} />
+        </Routes>
       </main>
 
       <footer>
