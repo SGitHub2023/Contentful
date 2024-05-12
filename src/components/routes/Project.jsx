@@ -24,10 +24,10 @@ function Project() {
 	);
 
 	const displayTemplate = (
-		<>
+		<div>
 			<h1>{project.title}</h1>
 			<button onClick={() => navigate("/")}>{"<< "}Back</button>
-		</>
+		</div>
 	);
 
 	return (

@@ -43,6 +43,7 @@ function ProjectsSection({ props }) {
 		<div>
 			<p>{subTitle}</p>
 			<Experience experience={experience}/>
+
 			<div className="grid gap-4 sm: gap-8 sm:grid-cols-2">
 				{entries.map(entry => (
 					<div key={entry.id}>

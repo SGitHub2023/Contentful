@@ -39,7 +39,7 @@ function App() {
 					<Routes>
 						<Route path='/' element={<Home sections={entries} />}/>
 						<Route path='/contact' element={<Contact props={entries.filter(entry => entry.slug === "contact-section")[0]}/>}/>
-						<Route path="/projects/:id" element={<Project/>}/>
+						<Route path="/project/:id" element={<Project/>}/>
 					</Routes>
 				)}
       </main>
