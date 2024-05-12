@@ -15,6 +15,7 @@ function App() {
 
 	useEffect(() => {
 		setLoading(true);
+
 		getContent("section")
 			.then((result) => {
 				console.log(result);
@@ -35,17 +36,20 @@ function App() {
 
       <main>
 				{!loading && (
-				<Routes>
-					<Route path='/' element={<Home sections={entries} />}/>
-					<Route path='/contact' element={<Contact props={entries.filter(entry => entry.slug === "contact-section")[0]}/>}/>
-					<Route path="/project/:id" element={<Project/>}/>
-				</Routes>
+					<Routes>
+						<Route path='/' element={<Home sections={entries} />}/>
+						<Route path='/contact' element={<Contact props={entries.filter(entry => entry.slug === "contact-section")[0]}/>}/>
+						<Route path="/projects/:id" element={<Project/>}/>
+					</Routes>
 				)}
       </main>
 
       <footer>
-        <Footer />
+				{!loading && (
+        	<Footer props={entries.filter(entry => entry.slug === "footer-section")[0]} />
+				)}
       </footer>
+
     </>
   );
 }
