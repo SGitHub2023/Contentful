@@ -12,18 +12,20 @@ function App() {
 
 	const [entries, setEntries] = useState([]);
 	const [loading, setLoading] = useState(true);
+	const [error, setError] = useState([]);
 
 	useEffect(() => {
 		setLoading(true);
 
 		getContent("section")
 			.then((result) => {
-				console.log(result);
+				//console.log(result);
 				setEntries(result);
 				setLoading(false);
 			})
 			.catch((error) => {
-				console.error(error);
+				//console.error(error);
+				setError(error)
 				setLoading(false);
 			});
 	}, []);
