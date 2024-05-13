@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => {
+  const [isOnline, setIsOnline] = useState(true);
+
   return (
     <section className="h-screen flex items-center justify-center bg-gray-100">
       <div className="text-center">
@@ -18,7 +20,14 @@ const HeroSection = () => {
             START CONSULTING
           </button>
         </Link>
-        <p className="text-sm mt-4">I'm online</p>
+        <p className="text-sm mt-4">
+          {isOnline ? (
+            <span className="bg-green-500 rounded-full w-4 h-4 inline-block mr-1"></span>
+          ) : (
+            <span className="bg-red-500 rounded-full w-4 h-4 inline-block mr-1"></span>
+          )}
+          {isOnline ? "online" : "offline"}
+        </p>
       </div>
     </section>
   );
