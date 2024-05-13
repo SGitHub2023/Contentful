@@ -3,6 +3,10 @@ import SocialIconNav from "../SocialIconNav.jsx";
 import ContactInfo from "../ContactInfo.jsx";
 
 function AboutMeSection({ props }) {
+
+	console.log(props);
+
+
 	const {
 		ctaButtonLabel,
 		sectionText1,
