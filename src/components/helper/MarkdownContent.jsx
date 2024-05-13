@@ -8,9 +8,9 @@ function MarkdownContent({ content }) {
 	// const sanitizedHTML = sanitizeContent(markdown.replace(/<p><\/p>/gi, ''));
 
 	return (
-		<div>
+		<>
 			<Markdown>{content}</Markdown>
-		</div>
+		</>
 
 	)
 }
