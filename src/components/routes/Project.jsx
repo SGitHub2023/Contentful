@@ -11,7 +11,7 @@ function Project() {
 	const { id } = useParams();
 	const navigate = useNavigate();
 
-	let richTextContent1, richTextContent2;
+	let rtCnt1, rtCnt2, rtCnt3;
 
 	useEffect(() => {
 		setLoading(true)
@@ -22,8 +22,9 @@ function Project() {
 	}, []);
 
 	if(!loading) {
-		richTextContent1 = project.linkedContent[0].fields.richtextPageContent;
-		richTextContent2 = project.linkedContent[1].fields.richtextPageContent;
+		rtCnt1 = (project.linkedContent[0]) ? project.linkedContent[0].fields.richtextPageContent : '';
+		rtCnt2 = (project.linkedContent[1]) ? project.linkedContent[1].fields.richtextPageContent : '';
+		rtCnt3 = (project.linkedContent[2]) ? project.linkedContent[1].fields.richtextPageContent : '';
 	}
 
 	const loadingTemplate = (
@@ -33,8 +34,9 @@ function Project() {
 	const displayTemplate = (
 		<>
 			<h1>{project.title}</h1>
-			<RichtextContent content={richTextContent1}/>
-			<RichtextContent content={richTextContent2}/>
+			{rtCnt1 && <RichtextContent content={rtCnt1}/>}
+			{rtCnt2 && <RichtextContent content={rtCnt2}/>}
+			{rtCnt3 && <RichtextContent content={rtCnt3}/>}
 			<button onClick={() => navigate("/")}>{"<< "}Back</button>
 		</>
 	);

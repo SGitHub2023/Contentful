@@ -1,11 +1,9 @@
 import Skills from "../Skills.jsx";
 import SocialIconNav from "../SocialIconNav.jsx";
 import ContactInfo from "../ContactInfo.jsx";
+import MarkdownContent from "../helper/MarkdownContent.jsx";
 
 function AboutMeSection({ props }) {
-
-	console.log(props);
-
 
 	const {
 		ctaButtonLabel,
@@ -24,7 +22,7 @@ function AboutMeSection({ props }) {
 		<section>
 			<h1>{title}</h1>
 			<p>{subTitle}</p>
-			<p>{sectionText1}</p>
+			<MarkdownContent content={sectionText1}/>
 			<a href={cvFile} target="_blank">{ctaButtonLabel}</a>
 			<Skills skills={skills}/>
 			<SocialIconNav socialMediaProfiles={socialMediaProfiles}/>

@@ -13,7 +13,7 @@ function SocialIconNav({socialMediaProfiles}) {
 			<ul className="flex gap-2">
 			{socialMediaItems.map((item, i) => (
 				<li key={i} className={item.class}>
-					<a href={item.url}>{item.name}</a>
+					<a href={item.url} target="_blank">{item.name}</a>
 				</li>
 			))}
 			</ul>

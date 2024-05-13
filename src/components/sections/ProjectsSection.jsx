@@ -6,7 +6,6 @@ import Experience from "../Experience.jsx";
 
 function ProjectsSection({ props }) {
 
-	//console.log(props);
 	const {
 		title,
 		subTitle,
@@ -40,11 +39,11 @@ function ProjectsSection({ props }) {
 	);
 
 	const displayTemplate = (
-		<div>
+		<section>
 			<p>{subTitle}</p>
 			<Experience experience={experience}/>
 
-			<div className="grid gap-4 sm: gap-8 sm:grid-cols-2">
+			<div className="grid gap-4 sm:gap-8 sm:grid-cols-2">
 				{entries.map(entry => (
 					<div key={entry.id}>
 						<Link to={'/project/' + entry.slug}>
@@ -53,7 +52,7 @@ function ProjectsSection({ props }) {
 					</div>
 				))}
 			</div>
-		</div>
+		</section>
 	);
 
 	return (
