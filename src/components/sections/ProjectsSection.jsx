@@ -39,10 +39,7 @@ function ProjectsSection({ props }) {
 	);
 
 	const displayTemplate = (
-		<section>
-			<p>{subTitle}</p>
-			<Experience experience={experience}/>
-
+		<>
 			<div className="grid gap-4 sm:gap-8 sm:grid-cols-2">
 				{entries.map(entry => (
 					<div key={entry.id}>
@@ -52,12 +49,14 @@ function ProjectsSection({ props }) {
 					</div>
 				))}
 			</div>
-		</section>
+		</>
 	);
 
 	return (
 		<section>
 			<h1>{title}</h1>
+			<p>{subTitle}</p>
+			<Experience experience={experience}/>
 			{loading ? loadingTemplate : displayTemplate}
 		</section>
 	);
