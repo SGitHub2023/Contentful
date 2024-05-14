@@ -1,21 +1,23 @@
+import { Icon } from '@iconify/react';
+
 function Experience({ experience }) {
 
-	const myExperience = experience.fields.json.data.map(item => {
+	const experienceItems = experience.fields.json.data.map(item => {
 		return {
-			insight: Object.keys(item)[0],
-			value: Object.values(item)[0]
+			name: Object.values(item)[0][0],
+			icon: Object.values(item)[0][1]
 		}
 	});
 
 	return (
-		<div className="flex gap-2">
-			{myExperience.map((item, i) => (
-				<div key={i} className="">
-					<span className="block">{item.skill}</span>
-					<span className="block">{item.value}</span>
-				</div>
+		<ul className="flex gap-2">
+			{experienceItems.map((item, i) => (
+				<li key={i} className={item.class}>
+					<Icon icon={item.icon} className="text-3xl text-red-600 hover:text-cyan-800"/>
+					<span className="sr-only">{item.name}</span>
+				</li>
 			))}
-		</div>
+		</ul>
 	)
 }
 
