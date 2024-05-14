@@ -1,19 +1,21 @@
-function Footer({ props }) {
+import SocialIconNav from "../SocialIconNav";
 
-	//console.log(props);
+function Footer({ props }) {
 
 	const {
 		title,
 		subTitle,
-		sectionText1
+		sectionText1,
+		linkedContent
 	} = props;
 
-
+	const socialMediaProfiles = linkedContent.filter(entry => entry.fields.slug === "socialmedia")[0];
 
   return (
 		<>
 			<h1>{title}</h1>
 			<div>{subTitle}</div>
+			<SocialIconNav socialMediaProfiles={socialMediaProfiles}/>
 		</>
 	);
 }
