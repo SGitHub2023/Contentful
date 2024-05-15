@@ -19,7 +19,7 @@ function AboutMeSection({ props }) {
 	const cvFile = personalInfo.fields.cv.fields.file.url;
 
 	return (
-		<section>
+		<section className="about-me-section" id="about-me">
 			<h1>{title}</h1>
 			<p>{subTitle}</p>
 			<MarkdownContent content={sectionText1}/>

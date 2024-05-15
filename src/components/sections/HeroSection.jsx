@@ -15,7 +15,7 @@ function HeroSection({ props }) {
 	const img = sectionImage.fields.file.url;
 
   return (
-		<section className="hero-section">
+		<section className="hero-section" id="hero">
 			<h1><HTMLContent content={title}/></h1>
 			<div className="w-52 h-52 rounded-full overflow-hidden">
 				<img src={img} alt="sdsds" />
