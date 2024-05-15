@@ -32,7 +32,7 @@ function App() {
 
   return (
     <>
-      <header className="bg-teal-900 text-white">
+      <header>
         <Navbar />
       </header>
 
