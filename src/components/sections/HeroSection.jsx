@@ -15,35 +15,63 @@ function HeroSection({ props }) {
 
   const img = sectionImage.fields.file.url;
   const openContactForm = () => {
-    window.open(ctaButtonTarget, "/contact");
+    window.open(ctaButtonTarget, "_blank");
   };
 
   return (
-    <section className="bg-gray-100 min-h-screen flex items-center">
+    <section
+      className="bg-teal-950 min-h-screen flex items-center"
+      style={{
+        backgroundImage: `url("src/components/images/HeroSwoosh.png")`,
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+      }}
+    >
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="flex flex-col items-start justify-center md:justify-start">
-            <h1 className="text-5xl font-extrabold leading-tight mb-4">
-              <HTMLContent content={title} />
+          <div className="flex flex-col items-start justify-center md:justify-center">
+            <style>
+              {`
+                h1.title-font {
+                  font-family: 'Train One', cursive;
+                }
+              `}
+            </style>
+            <h1 className="text-7xl font-italic leading-tight mb-4 title-font text-white mx-8">
+              <HTMLContent content={title} className="title-font" />
             </h1>
-            <h2 className="text-xl font-extrabold mb-4">{subTitle}</h2>
-            <p className="text-xl font-semibold mb-4">{sectionText1}</p>
-            <p className="text-xl font-semibold">{sectionText2}</p>
+            <h2 className="text-6xl font-extrabold mb-10 text-white mx-8">
+              {subTitle}
+            </h2>
+            <p className="text-xl font-italic mb-20 text-white mx-8">
+              {sectionText1}
+            </p>
+
+            <button
+              className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 px-4 rounded justify-center mx-8"
+              onClick={openContactForm}
+            >
+              {ctaButtonLabel}
+            </button>
           </div>
           <div className="flex items-center justify-center">
             <img
-              className="w-52 h-52 rounded-full overflow-hidden"
+              className="w-5/6 h-5/6 rounded-full overflow-hidden"
               src={img}
               alt="John Doe"
             />
+            <div className="absolute top-3/4 start-2/4 fixed transform -translate-x-1/2 -translate-y-1/2">
+              <div className="bg-white rounded-lg p-4 text-black text-center">
+                <h3 className="text-xl font-bold mb-2">
+                  Fullstack <br />
+                  Web & App <br />
+                  Developer
+                </h3>
+              </div>
+            </div>
           </div>
         </div>
-        <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          onClick={openContactForm}
-        >
-          {ctaButtonLabel}
-        </button>
       </div>
     </section>
   );
