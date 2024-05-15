@@ -57,7 +57,7 @@ function HeroSection({ props }) {
           </div>
           <div className="relative">
             <img
-              className="w-5/6 h-5/6 rounded-full overflow-hidden"
+              className="w-5/6 h-5/6 rounded-full overflow-hidden md:w-3/6 h-3/6"
               src={img}
               alt="John Doe"
             />
