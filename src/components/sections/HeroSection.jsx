@@ -55,13 +55,13 @@ function HeroSection({ props }) {
               {ctaButtonLabel}
             </button>
           </div>
-          <div className="flex items-center justify-center">
+          <div className="relative">
             <img
               className="w-5/6 h-5/6 rounded-full overflow-hidden"
               src={img}
               alt="John Doe"
             />
-            <div className="absolute top-3/4 start-2/4 fixed transform -translate-x-1/2 -translate-y-1/2">
+            <div className="absolute left-[-50px] top-2/4 transform translateX(-50px) -translate-y-1/2">
               <div className="bg-white rounded-lg p-4 text-black text-center">
                 <h3 className="text-xl font-bold mb-2">
                   Fullstack <br />
