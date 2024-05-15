@@ -1,0 +1,8 @@
+.section {
+  @apply bg-lime-700;
+}
+
+.contact-info-table {
+  & tr { @apply odd:bg-black/10; }
+  & td { @apply align-top; }
+}
