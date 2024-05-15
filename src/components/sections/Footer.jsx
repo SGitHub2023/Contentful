@@ -10,23 +10,21 @@ function Footer({ props }) {
   const email = linkedContent[1].fields.eMail;
 
   return (
-    <footer className='bg-teal-900 py-16'>
-      <div className='container mx-auto flex flex-col place-items-start '>
-        <h1 className='text-xl font-bold text-white mb-6'>{title}</h1>
-        <p className='text-stone-300 text-sm font-light mb-6  w-1/3'>
-          {sectionText1}
-        </p>
-        <div className='container mx-auto flex flex-row place-items-center mb-6'>
+    <footer className="bg-teal-900 py-16">
+      <div className="container max-w-[600px] mx-auto flex flex-col text-center place-items-center ">
+        <h1 className="text-xl font-bold text-white mb-6">{title}</h1>
+        <p className="text-stone-300 text-sm font-light mb-6">{sectionText1}</p>
+        <p className="flex gap-1 items-center mb-4">
           <Icon
-            icon='ic:outline-email'
-            width='1rem'
-            height='1rem'
-            className='text-stone-300 text-sm font-thin mr-1'
+            icon="ic:outline-email"
+            width="1rem"
+            height="1rem"
+            className="text-stone-300 text-sm font-thin mr-1"
           />
-          <span className='text-stone-300 text-sm font-this'>{email} </span>
-        </div>
+          <span className="text-stone-300 text-sm font-this">{email} </span>
+        </p>
         <SocialIconNav socialMediaProfiles={socialMediaProfiles} />
-        <p className='text-stone-300 text-sm font-light mt-6'>{sectionText2}</p>
+        <p className="text-stone-300 text-sm font-light mt-6">{sectionText2}</p>
       </div>
     </footer>
   );
