@@ -1,10 +1,7 @@
-.section {
-  @apply bg-lime-700;
-}
-
 .contact-info-table {
+  @apply w-full;
   & tr { @apply odd:bg-black/10; }
-  & td { @apply align-top; }
+  & td { @apply align-top p-3; }
 }
 
 .mobile-nav {
@@ -15,9 +12,7 @@
   & ul li {
     @apply py-2 border-b border-white/50 last:border-none;
   }
-
 }
-
 .desktop-nav {
   @apply flex-1;
   & ul {

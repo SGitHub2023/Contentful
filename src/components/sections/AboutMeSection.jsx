@@ -25,48 +25,26 @@ function AboutMeSection({ props }) {
 
 	return (
 		<section className="about-me-section" id="about-me">
-
-			<div className="container grid grid-cols-1 sm:grid-cols-2 gap-4 py-16">
-
-				<div>
-					<h1>{title}</h1>
+			<div className="container grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12 md:gap-y-20 py-12 md:py-16">
+				<div className="md:order-1">
+					<h2 className="text-3xl font-bold mb-2">{title}</h2>
 					<p>{subTitle}</p>
-					<div className="flex gap-4 items-center">
+					<div className="flex gap-8 items-center mt-12">
 						<button
 							onClick={downloadCV}
 							className="flex gap-3 px-5 py-[0.5rem] items-center rounded-full bg-black text-white text-xs uppercase">
 							<Icon icon="mdi:tray-download" className="text-lg"/><span>{ctaButtonLabel}</span>
 						</button>
-
 						<SocialIconNav
 							socialMediaProfiles={socialMediaProfiles}
 							iconClassNames="text-3xl"
 						/>
 					</div>
-					<ContactInfo contactInfo={personalInfo}/>
 				</div>
-
-				<div>
-					<MarkdownContent content={sectionText1}/>
-					<Skills skills={skills}/>
-				</div>
-
+				<div className="md:order-2"><MarkdownContent content={sectionText1}/></div>
+				<div className="md:order-4"><Skills skills={skills}/></div>
+				<div className="md:order-3 self-center"><ContactInfo contactInfo={personalInfo}/></div>
 			</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		</section>
 	);
 }
