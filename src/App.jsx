@@ -32,7 +32,7 @@ function App() {
 
   return (
     <>
-      <header>
+      <header className="h-12 sm:h-16">
         <Navbar />
       </header>
 

@@ -7,7 +7,21 @@ import { useIsMobile } from "../../utilities/mobileCheck";
 function Navbar() {
 
 	const isMobile = useIsMobile(640);
-	const smoothScroll = (el) => el.scrollIntoView({ behavior: 'smooth'});
+	/*
+	const smoothScroll = (el) => {
+		el.scrollIntoView({
+			behavior: 'smooth',
+		});
+	}
+	*/
+	const smoothScroll2 = (el) => {
+		let offset = 48;
+		window.scrollTo({
+			behavior: 'smooth',
+			top: el.getBoundingClientRect().top - document.body.getBoundingClientRect().top - offset
+		})
+	}
+
 	let [isOpen, setIsOpen] = useState(false);
 
 	useEffect(() => {
@@ -26,16 +40,16 @@ function Navbar() {
 	const nav = (
 		<ul>
 			<li><Link to='/' onClick={closeNav}>Home</Link></li>
-			<li><HashLink to='/#projects' scroll={smoothScroll} onClick={closeNav}>Projects</HashLink></li>
-			<li><HashLink to='/#about-me' scroll={smoothScroll} onClick={closeNav}>About me</HashLink></li>
+			<li><HashLink to='/#projects' scroll={smoothScroll2} onClick={closeNav}>Projects</HashLink></li>
+			<li><HashLink to='/#about-me' scroll={smoothScroll2} onClick={closeNav}>About me</HashLink></li>
 			<li><Link to='/contact' onClick={closeNav}>Contact</Link></li>
 		</ul>
 	);
 
   return (
-		<section className="bg-teal-900">
+		<section className="bg-teal-900 fixed top-0 left-0 w-full z-30">
 			<div className="relative container mx-auto text-white px-0">
-				<div className="relative z-10 flex items-center bg-teal-900 p-4">
+				<div className="relative z-10 flex items-center bg-teal-900 h-12 sm:h-16 px-4">
 					<button className="flex-1 sm:hidden" onClick={toggleNav}>
 						<Icon icon="ion:menu-outline" className="text-3xl"/>
 						<span className="sr-only">Toggle Menu</span>
