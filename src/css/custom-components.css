@@ -6,3 +6,14 @@
   & tr { @apply odd:bg-black/10; }
   & td { @apply align-top; }
 }
+
+.mobile-nav {
+  @apply absolute -bottom-[95px] left-0 w-full z-0 bg-teal-700;
+}
+
+.desktop-nav {
+  @apply flex-1;
+  & ul {
+    @apply flex gap-6 items-center;
+  }
+}
