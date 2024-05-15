@@ -4,25 +4,12 @@ import { useEffect, useState } from "react";
 import { Icon } from '@iconify/react';
 import { useIsMobile } from "../../utilities/mobileCheck";
 
-function Navbar() {
-
-	const isMobile = useIsMobile(640);
-	/*
-	const smoothScroll = (el) => {
-		el.scrollIntoView({
-			behavior: 'smooth',
-		});
-	}
-	*/
-	const smoothScroll2 = (el) => {
-		let offset = 48;
-		window.scrollTo({
-			behavior: 'smooth',
-			top: el.getBoundingClientRect().top - document.body.getBoundingClientRect().top - offset
-		})
-	}
+function Navbar({ props }) {
 
 	let [isOpen, setIsOpen] = useState(false);
+	const isMobile = useIsMobile(640);
+	const personalInfo = props.linkedContent.filter(entry => entry.fields.slug === "personal-info")[0];
+	const cvFile = personalInfo.fields.cv.fields.file.url;
 
 	useEffect(() => {
 		if (!isMobile) setIsOpen(false);
@@ -37,11 +24,23 @@ function Navbar() {
 		setIsOpen(false);
 	}
 
+	const smoothScroll = (el) => {
+		let offset = isMobile ? 48 : 64;
+		window.scrollTo({
+			behavior: 'smooth',
+			top: el.getBoundingClientRect().top - document.body.getBoundingClientRect().top - offset
+		})
+	}
+
+	const downloadCV = () => {
+		window.open(cvFile, '_blank');
+	}
+
 	const nav = (
 		<ul>
 			<li><Link to='/' onClick={closeNav}>Home</Link></li>
-			<li><HashLink to='/#projects' scroll={smoothScroll2} onClick={closeNav}>Projects</HashLink></li>
-			<li><HashLink to='/#about-me' scroll={smoothScroll2} onClick={closeNav}>About me</HashLink></li>
+			<li><HashLink to='/#projects' scroll={smoothScroll} onClick={closeNav}>Projects</HashLink></li>
+			<li><HashLink to='/#about-me' scroll={smoothScroll} onClick={closeNav}>About me</HashLink></li>
 			<li><Link to='/contact' onClick={closeNav}>Contact</Link></li>
 		</ul>
 	);
@@ -55,7 +54,9 @@ function Navbar() {
 						<span className="sr-only">Toggle Menu</span>
 					</button>
 					{!isMobile && <nav className="desktop-nav">{nav}</nav>}
-					<button className="flex gap-3 px-4 py-[0.3rem] items-center rounded-full border-white border-2 text-xs uppercase">
+					<button
+						onClick={downloadCV}
+						className="flex gap-3 px-4 py-[0.3rem] items-center rounded-full border-white border-2 text-xs uppercase">
 						<Icon icon="mdi:tray-download" className="text-lg"/><span>Download CV</span>
 					</button>
 				</div>
