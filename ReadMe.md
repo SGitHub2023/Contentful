@@ -1,8 +1,15 @@
-# React + Vite
+## React & Contentful
+***
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Todo:
+* Icons
+* Mobile Menu
+* Tailwind -> Fonts
+* Longtext & Richtext Rendering (Markdown, Richtext Renderer)
+* Komponenten bauen und stylen
+* Project-Seite bauen und stylen
+* (404-Seite)
+* (Media Assets)
+* (Fehler abfangen)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
