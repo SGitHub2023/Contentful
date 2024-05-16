@@ -24,6 +24,11 @@ function Navbar({ props }) {
 		setIsOpen(false);
 	}
 
+	const HomeLink = () => {
+		closeNav();
+		window.scrollTo({top: 0});
+	}
+
 	const smoothScroll = (el) => {
 		let offset = isMobile ? 48 : 64;
 		window.scrollTo({
@@ -38,7 +43,7 @@ function Navbar({ props }) {
 
 	const nav = (
 		<ul>
-			<li><Link to='/' onClick={closeNav}>Home</Link></li>
+			<li><Link to='/' onClick={HomeLink}>Home</Link></li>
 			<li><HashLink to='/#projects' scroll={smoothScroll} onClick={closeNav}>Projects</HashLink></li>
 			<li><HashLink to='/#about-me' scroll={smoothScroll} onClick={closeNav}>About me</HashLink></li>
 			<li><Link to='/contact' onClick={closeNav}>Contact</Link></li>
