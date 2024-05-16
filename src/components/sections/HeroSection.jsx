@@ -20,7 +20,7 @@ function HeroSection({ props }) {
 
   return (
     <section
-      className="bg-teal-950 min-h-screen flex items-center"
+      className="bg-teal-950 min-h-screen flex items-center px-4"
       style={{
         backgroundImage: `url("src/components/images/HeroSwoosh.png")`,
         backgroundPosition: "center",
@@ -55,14 +55,17 @@ function HeroSection({ props }) {
               {ctaButtonLabel}
             </button>
           </div>
-          <div className="relative">
-            <img
-              className="w-5/6 h-5/6 rounded-full overflow-hidden md:w-3/6 h-3/6"
-              src={img}
-              alt="John Doe"
-            />
-            <div className="absolute left-[-50px] top-2/4 transform translateX(-50px) -translate-y-1/2">
-              <div className="bg-white rounded-lg p-4 text-black text-center">
+
+          <div className="">
+            <div className="relative md:-translate-y-28">
+              <div className="aspect-square rounded-full overflow-hidden max-w-[400px]">
+                <img
+                  className="w-full h-full object-cover object-top"
+                  src={img}
+                  alt="John Doe"
+                />
+              </div>
+              <div className="bg-white rounded-lg p-4 text-black text-center absolute bottom-0 left-0 z-10">
                 <h3 className="text-xl font-bold mb-2">
                   Fullstack <br />
                   Web & App <br />
