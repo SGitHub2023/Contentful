@@ -43,56 +43,15 @@ function Project() {
   const loadingTemplate = <p>Loading...</p>;
 
   const displayTemplate = (
-    <div className="flex flex-col lg:flex-row">
-      <div className="lg:w-1/3 bg-teal-950 pr-6 sm:text-center">
-        <div className="p-6 text-white">
-          <h2 className="text-white text-lg font-bold mb-4">{project.title}</h2>
+    <div className="Project flex flex-col lg:flex-row">
+      <div className="Project lg:w-1/3 bg-teal-950 pr-6 sm:text-center">
+        <div className="Project p-6 text-white">
+          <h2 className="text-lg font-bold mb-4">{project.title}</h2>
+          <div className="separator"></div>
           {rtCnt2 && <RichtextContent content={rtCnt2} />}
-
-          <p className="text-white mb-4">Year: 2024</p>
-          <h3 className="text-white font-bold mb-2">HTML Tutorial</h3>
-          <p className="text-white mb-4">
-            Welcome to the world of HTML! In this tutorial, you'll embark on an
-            exciting journey to learn the foundational language of web
-            development.
-          </p>
-          <hr className="border-white my-6" />
-          <h3 className="text-white font-bold mb-2">Tutorial Outline</h3>
-          <ul className="list-none text-white mb-4 pr-4">
-            <li>Introduction to HTML</li>
-            <li>Basic HTML Tags</li>
-            <li>Structuring Web Pages</li>
-            <li>Creating Links and Images</li>
-            <li>HTML Forms</li>
-            <li>HTML Tables</li>
-            <li>Embedding Multimedia</li>
-            <li>HTML5 Semantic Elements</li>
-            <li>Best Practices and Tips</li>
-          </ul>
-          <hr className="border-white my-6" />
-          <p className="text-white mb-4">
-            <a
-              href={project.projectLink}
-              className="text-blue-400 hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View Project
-            </a>
-          </p>
-          <p className="text-white mb-4">
-            <a
-              href={project.githubLink}
-              className="text-blue-400 hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub Repository
-            </a>
-          </p>
         </div>
       </div>
-      <div className="lg:w-2/3 bg-white p-6 flex justify-center items-center">
+      <div className="Project lg:w-2/3 bg-white p-6 flex justify-center items-center">
         <div>
           <a
             href={project.projectLink}
@@ -110,7 +69,7 @@ function Project() {
           {rtCnt3 && <RichtextContent content={rtCnt3} />}
           <button
             onClick={() => navigate("/")}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
+            className="bg-emerald-600 hover:bg-emerald-200 text-white font-bold py-2 px-4 rounded mt-4"
           >
             {"<< "}Back
           </button>

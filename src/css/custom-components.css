@@ -23,3 +23,86 @@
     @apply flex gap-6 items-center;
   }
 }
+
+.Project {
+  display: flex;
+  flex-direction: column;
+}
+
+.Project .lg\:w-1\/3 {
+  width: 33.333333%;
+}
+
+.Project .lg\:w-2\/3 {
+  width: 66.666667%;
+}
+
+.Project .bg-teal-950 {
+  background-color: rgb(4, 47, 46);
+}
+
+.Project .bg-white {
+  background-color: #fff;
+}
+
+.Project .pr-6 {
+  padding-right: 1.5rem;
+}
+
+.Project .sm\:text-center {
+  text-align: center;
+}
+
+.Project .p-6 {
+  padding: 1.5rem;
+}
+
+.Project .text-white {
+  color: #fff;
+}
+
+.Project .text-lg {
+  font-size: 1.125rem;
+}
+
+.Project .font-bold {
+  font-weight: 700;
+}
+
+.Project .mb-4 {
+  margin-bottom: 1rem;
+}
+
+.Project .border-white {
+  border-color: #fff;
+}
+
+.Project .my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.Project .font-bold {
+  font-weight: 700;
+}
+
+.Project .mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.Project .list-none {
+  list-style: none;
+  padding-left: 0;
+}
+
+.Project .pr-4 {
+  padding-right: 1rem;
+}
+
+.Project .text-blue-400 {
+  color: #3b82f6;
+}
+
+.Project .hover\:underline:hover {
+  text-decoration: underline;
+}
