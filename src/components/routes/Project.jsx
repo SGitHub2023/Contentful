@@ -45,8 +45,10 @@ function Project() {
   const displayTemplate = (
     <div className="flex flex-col lg:flex-row">
       <div className="lg:w-1/3 bg-teal-950 pr-6 sm:text-center">
-        <div className="p-6">
+        <div className="p-6 text-white">
           <h2 className="text-white text-lg font-bold mb-4">{project.title}</h2>
+          {rtCnt2 && <RichtextContent content={rtCnt2} />}
+
           <p className="text-white mb-4">Year: 2024</p>
           <h3 className="text-white font-bold mb-2">HTML Tutorial</h3>
           <p className="text-white mb-4">
@@ -104,7 +106,7 @@ function Project() {
             />
           </a>
           {rtCnt1 && <RichtextContent content={rtCnt1} />}
-          {rtCnt2 && <RichtextContent content={rtCnt2} />}
+
           {rtCnt3 && <RichtextContent content={rtCnt3} />}
           <button
             onClick={() => navigate("/")}

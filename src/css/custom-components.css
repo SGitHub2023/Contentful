@@ -3,6 +3,22 @@
 }
 
 .contact-info-table {
-  & tr { @apply odd:bg-black/10; }
-  & td { @apply align-top; }
+  & tr {
+    @apply odd:bg-black/10;
+  }
+  & td {
+    @apply align-top;
+  }
+}
+
+.richtext-block {
+  & p {
+    @apply mb-4;
+  }
+  & ul p {
+    @apply mb-0;
+  }
+  & hr {
+    @apply my-4;
+  }
 }
