@@ -6,11 +6,14 @@ function ProjectCard({ entry }) {
       <div className='aspect-video overflow-hidden'>
         <img src={featuredImageUrl} alt={entry.title} />
       </div>
-      <div className='bg-zinc-800'>
-        <p className='p-2 text-xs text-stone-300 text-start font-normal uppercase ml-4'>
+      {/* Containerstyling für den Streifen unter der Projectcard */}
+      <div className='bg-zinc-800 rounded-b-2xl pt-2 pb-2'>
+        {/* Click here to Visit Schriftzug */}
+        <p className='text-[10px] text-stone-300 text-start font-normal uppercase ml-4 pt-3 pl-2'>
           click here to visit
         </p>
-        <h2 className='p-2 text-xl text-white text-start uppercase ml-4'>
+        {/* Projectcard Hauptschriftzug (Power of HTML/CSS Tutorial) */}
+        <h2 className='text-xl text-white text-start uppercase ml-4 pb-3 pl-2'>
           {entry.title}
         </h2>
       </div>

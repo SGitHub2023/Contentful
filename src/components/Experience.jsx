@@ -9,12 +9,13 @@ function Experience({ experience }) {
   });
 
   return (
-    <ul className='flex gap-10 drop-shadow-xl'>
+    <ul className='flex gap-10 drop-shadow-xl mt-6'>
       {experienceItems.map((item, i) => (
         <li key={i} className={item.class}>
+          {/* Anpassung des Icon Stylings */}
           <Icon
             icon={item.icon}
-            className='text-4xl text-stone-300 hover:text-black mb-6 drop-shadow-xl'
+            className='text-5xl text-stone-300 hover:text-black mb-14 drop-shadow-xl'
           />
           <span className='sr-only '>{item.name}</span>
         </li>

@@ -47,14 +47,16 @@ function ProjectsSection({ props }) {
   );
 
   return (
-    <section className='bg-teal-900 px-4 py-8'>
-      <div className='container mx-auto flex flex-col place-items-center text-center'>
+    // Container für die ProjectsSection
+    <section className='bg-teal-950 px-4 py-8'>
+      <div className='container mx-auto flex flex-col place-items-center text-center mt-12 mb-36'>
         {/* Experience With Schriftzug */}
         <p className='text-gray-400 uppercase font-semibold text-xl drop-shadow-lg mb-4'>
           {subTitle}
         </p>
         <Experience experience={experience} />
-        <h1 className='text-white text-2xl uppercase font-bold mb-2'>
+        {/* Projects Schriftzug */}
+        <h1 className='text-white text-3xl uppercase font-bold mb-12 mt-6 drop-shadow-lg'>
           {title}
         </h1>
         {loading ? loadingTemplate : displayTemplate}
