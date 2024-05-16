@@ -1,17 +1,24 @@
 function ProjectCard({ entry }) {
-
-	const featuredImageUrl = entry.featuredImage.fields.file.url;
+  const featuredImageUrl = entry.featuredImage.fields.file.url;
 
   return (
-		<div className="project-card rounded overflow-hidden">
-			<div className="aspect-video overflow-hidden">
-				<img src={featuredImageUrl} alt={entry.title} />
-			</div>
-			<div className="bg-black/10">
-				<h2 className="p-2 text-xl">{entry.title}</h2>
-			</div>
-		</div>
-	);
+    <div className='project-card rounded overflow-hidden'>
+      <div className='aspect-video overflow-hidden'>
+        <img src={featuredImageUrl} alt={entry.title} />
+      </div>
+      {/* Containerstyling für den Streifen unter der Projectcard */}
+      <div className='bg-zinc-800 rounded-b-2xl pt-2 pb-2'>
+        {/* Click here to Visit Schriftzug */}
+        <p className='text-[10px] text-stone-300 text-start font-normal uppercase ml-4 pt-3 pl-2'>
+          click here to visit
+        </p>
+        {/* Projectcard Hauptschriftzug (Power of HTML/CSS Tutorial) */}
+        <h2 className='text-xl text-white text-start uppercase ml-4 pb-3 pl-2'>
+          {entry.title}
+        </h2>
+      </div>
+    </div>
+  );
 }
 
 export default ProjectCard;
