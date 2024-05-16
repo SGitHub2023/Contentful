@@ -1,5 +1,6 @@
 import HTMLContent from "../helper/HTMLContent";
 import Contact from "../routes/Contact";
+import { Link } from "react-router-dom";
 
 function HeroSection({ props }) {
   const {
@@ -47,13 +48,13 @@ function HeroSection({ props }) {
             <p className="text-xl font-italic mb-20 text-white mx-8">
               {sectionText1}
             </p>
-
-            <button
-              className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 px-4 rounded justify-center mx-8"
-              onClick={openContactForm}
+            <Link
+              className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 px-4 rounded-full justify-center mx-8"
+              role="button"
+              to="/contact"
             >
               {ctaButtonLabel}
-            </button>
+            </Link>
           </div>
 
           <div className="">
