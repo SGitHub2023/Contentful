@@ -2,7 +2,8 @@ function ProjectCard({ entry }) {
   const featuredImageUrl = entry.featuredImage.fields.file.url;
 
   return (
-    <div className='project-card rounded overflow-hidden'>
+    // Stylings für die projectcard selbst, bei darüber fahren bewegt sich die Card.
+    <div className='project-card rounded overflow-hidden group-hover:ease-in group-hover:transform transition duration-300 transform hover:-translate-y-4'>
       <div className='aspect-video overflow-hidden'>
         <img src={featuredImageUrl} alt={entry.title} />
       </div>
