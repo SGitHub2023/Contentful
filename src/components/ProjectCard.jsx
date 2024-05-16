@@ -2,7 +2,7 @@ function ProjectCard({ entry }) {
   const featuredImageUrl = entry.featuredImage.fields.file.url;
 
   return (
-    // Stylings für die projectcard selbst, bei darüber fahren bewegt sich die Card.
+    // Projectcard Element fährt 4px nach oben beim drüber fahren, mit der duration kann man die Dauer des Übergangs einstellen und die "ease-in" sorgt dafür das der Übergang erst beschleunigt und dann verlangsamt.
     <div className='project-card rounded overflow-hidden group-hover:ease-in group-hover:transform transition duration-300 transform hover:-translate-y-4'>
       <div className='aspect-video overflow-hidden'>
         <img src={featuredImageUrl} alt={entry.title} />
