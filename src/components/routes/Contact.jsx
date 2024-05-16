@@ -6,15 +6,33 @@ function Contact({ props }) {
 	const personalInfo = linkedContent[0].fields;
 
 	return (
-		<div>
-			<h2>{title}</h2>
-			<Icon icon="ion:mail-outline" className="text-2xl" /> {personalInfo.eMail}
-			<Icon icon="ion:phone-portrait-outline" className="text-2xl" />{" "}
-			{personalInfo.phone}
-			<Icon icon="ion:location-outline" className="text-2xl" />{" "}
-			{personalInfo.address}, {personalInfo.zipCode} {personalInfo.city}
-			<ContactForm jotFormUrl={props.ctaButtonTarget} />
-		</div>
+		<section className="bg-teal-950 text-white">
+			<div className="container py-12 grid grid-cols-1 gap-8 lg:grid-cols-2">
+				<div>
+					<h2 className="text-5xl font-bold mb-20">{title}</h2>
+					<div className="flex gap-4 mb-8">
+						<Icon icon="ion:mail-outline" className="text-2xl" />
+						<span>{personalInfo.eMail} </span>
+					</div>
+
+					<div className="flex gap-4 mb-8">
+						<Icon icon="ion:phone-portrait-outline" className="text-2xl" />
+						<span>{personalInfo.phone} </span>
+					</div>
+
+					<div className="flex gap-4 mb-8">
+						<Icon icon="ion:location-outline" className="text-2xl" />
+						<span>
+							{" "}
+							{personalInfo.address}, {personalInfo.zipCode} {personalInfo.city}
+						</span>
+					</div>
+				</div>
+				<div>
+					<ContactForm jotFormUrl={props.ctaButtonTarget} />
+				</div>
+			</div>
+		</section>
 	);
 }
 
