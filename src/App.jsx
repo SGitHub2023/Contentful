@@ -30,10 +30,13 @@ function App() {
 			});
 	}, []);
 
+
   return (
     <>
-      <header>
-        <Navbar />
+      <header className="h-12 sm:h-16">
+				{!loading &&
+					<Navbar props={entries.filter(entry => entry.slug === "footer-section")[0]} />
+				}
       </header>
 
       <main>

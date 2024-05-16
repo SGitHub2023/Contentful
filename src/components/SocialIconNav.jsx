@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react";
-function SocialIconNav({ socialMediaProfiles }) {
+function SocialIconNav({ socialMediaProfiles, iconClassNames }) {
   const socialMediaItems = socialMediaProfiles.fields.json.data.map((item) => {
     return {
       name: Object.values(item)[0][0],
@@ -16,7 +16,7 @@ function SocialIconNav({ socialMediaProfiles }) {
             <a href={item.url} target='_blank'>
               <Icon
                 icon={item.icon}
-                className='text-3xl text-white hover:text-black'
+                className={iconClassNames}
               />
               <span className='sr-only'>{item.name}</span>
             </a>

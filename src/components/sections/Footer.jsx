@@ -23,7 +23,10 @@ function Footer({ props }) {
           />
           <span className="text-stone-300 text-sm font-this">{email} </span>
         </p>
-        <SocialIconNav socialMediaProfiles={socialMediaProfiles} />
+        <SocialIconNav
+					socialMediaProfiles={socialMediaProfiles}
+					iconClassNames="text-3xl text-white hover:text-black"
+				/>
         <p className="text-stone-300 text-sm font-light mt-6">{sectionText2}</p>
       </div>
     </footer>

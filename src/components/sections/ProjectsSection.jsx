@@ -53,7 +53,7 @@ function ProjectsSection({ props }) {
 	);
 
 	return (
-		<section>
+		<section className="projects-section" id="projects">
 			<h1>{title}</h1>
 			<p>{subTitle}</p>
 			<Experience experience={experience}/>
