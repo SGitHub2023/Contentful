@@ -1,7 +1,11 @@
 .contact-info-table {
   @apply w-full;
-  & tr { @apply odd:bg-black/10; }
-  & td { @apply align-top p-3; }
+  & tr {
+    @apply odd:bg-black/10;
+  }
+  & td {
+    @apply align-top p-3;
+  }
 }
 
 .mobile-nav {
@@ -18,4 +22,50 @@
   & ul {
     @apply flex gap-6 items-center;
   }
+}
+
+.left-content {
+  text-align: right;
+  font-size: smaller;
+  @media (min-width: 768px) {
+    position: sticky;
+    top: 0;
+    max-height: calc(100vh - 100px);
+  }
+}
+.project-overview {
+  & p,
+  & hr {
+    @apply my-4;
+  }
+  & ul p {
+    @apply my-0;
+  }
+  & h3 {
+    @apply mb-2;
+  }
+  & a {
+    @apply text-emerald-600;
+  }
+  & a:hover {
+    @apply text-emerald-200;
+  }
+  & h4 {
+    @apply text-4xl;
+  }
+  & p {
+    @apply font-light;
+  }
+}
+.project-img {
+  transform: perspective(400px) rotate3d(0, 0, 0, calc(var(--i, 1) * 8deg));
+  mask: linear-gradient(135deg, #000c 40%, #000, #000c 60%) 100% 100% / 240%
+    240%;
+  transition: transform 0.4s, mask-position 0.4s;
+  cursor: pointer;
+}
+
+.project-img:hover {
+  --i: -1;
+  mask-position: 0 0;
 }
