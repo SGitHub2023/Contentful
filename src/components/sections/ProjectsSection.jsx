@@ -49,7 +49,7 @@ function ProjectsSection({ props }) {
 
   return (
     // Container für die ProjectsSection
-    <section className='bg-teal-950 px-4 py-8'>
+    <section className='bg-teal-950 px-4 py-8' id="projects">
       <div className='container mx-auto flex flex-col place-items-center text-center mt-12 mb-36'>
         {/* Experience With Schriftzug */}
         <p className='text-gray-400 uppercase font-semibold text-xl drop-shadow-lg mb-4'>
@@ -64,5 +64,9 @@ function ProjectsSection({ props }) {
       </div>
     </section>
   );
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 413a52b713c6edae689761339d414a82fa7ff092
 
 export default ProjectsSection;
