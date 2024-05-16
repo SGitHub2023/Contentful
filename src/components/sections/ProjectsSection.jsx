@@ -46,6 +46,7 @@ function ProjectsSection({ props }) {
     </>
   );
 
+
   return (
     // Container für die ProjectsSection
     <section className='bg-teal-950 px-4 py-8'>
@@ -63,6 +64,33 @@ function ProjectsSection({ props }) {
       </div>
     </section>
   );
+	const loadingTemplate = (
+		<p>Loading...</p>
+	);
+
+	const displayTemplate = (
+		<>
+			<div className="grid gap-4 sm:gap-8 sm:grid-cols-2">
+				{entries.map(entry => (
+					<div key={entry.id}>
+						<Link to={'/project/' + entry.slug}>
+							<ProjectCard entry={entry} />
+						</Link>
+					</div>
+				))}
+			</div>
+		</>
+	);
+
+	return (
+		<section className="projects-section" id="projects">
+			<h1>{title}</h1>
+			<p>{subTitle}</p>
+			<Experience experience={experience}/>
+			{loading ? loadingTemplate : displayTemplate}
+		</section>
+	);
+
 }
 
 export default ProjectsSection;

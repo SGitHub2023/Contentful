@@ -8,11 +8,11 @@ function Skills({skills}) {
 	});
 
 	return (
-		<div className="grid grid-cols-2 gap-2">
+		<div className="grid grid-cols-2 gap-4">
 			{mySkills.map((item, i) => (
-				<div key={i} className="bg-black/20 text-center p-2">
+				<div key={i} className="border-teal-600 border-4 rounded-xl text-center p-6">
+					<span className="block font-bold text-4xl">{item.value}</span>
 					<span className="block">{item.skill}</span>
-					<span className="block">{item.value}</span>
 				</div>
 			))}
 		</div>

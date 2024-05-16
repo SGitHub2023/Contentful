@@ -29,9 +29,7 @@ function HeroSection({ props }) {
       }}
     >
       <div className="container mx-auto">
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-
           <div className="flex flex-col items-start justify-center md:justify-center">
             <style>
               {`
@@ -59,24 +57,23 @@ function HeroSection({ props }) {
           </div>
 
           <div className="">
-						<div className="relative md:-translate-y-28">
-							<div className="aspect-square rounded-full overflow-hidden max-w-[400px]">
-								<img
-									className="w-full h-full object-cover object-top"
-									src={img}
-									alt="John Doe"
-								/>
-							</div>
-							<div className="bg-white rounded-lg p-4 text-black text-center absolute bottom-0 left-0 z-10">
-								<h3 className="text-xl font-bold mb-2">
-									Fullstack <br />
-									Web & App <br />
-									Developer
-								</h3>
-							</div>
-						</div>
+            <div className="relative md:-translate-y-28">
+              <div className="aspect-square rounded-full overflow-hidden max-w-[400px]">
+                <img
+                  className="w-full h-full object-cover object-top"
+                  src={img}
+                  alt="John Doe"
+                />
+              </div>
+              <div className="bg-white rounded-lg p-4 text-black text-center absolute bottom-0 left-0 z-10">
+                <h3 className="text-xl font-bold mb-2">
+                  Fullstack <br />
+                  Web & App <br />
+                  Developer
+                </h3>
+              </div>
+            </div>
           </div>
-
         </div>
       </div>
     </section>
