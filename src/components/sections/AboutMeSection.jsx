@@ -30,26 +30,33 @@ function AboutMeSection({ props }) {
           <h2 className='text-5xl font-bold mb-3'>{title}</h2>
           <p className='text-3xl font-light'>{subTitle}</p>
           <div className='flex gap-8 items-center mt-12 '>
+
             <button
               onClick={downloadCV}
-              className='flex gap-3 px-5 py-[0.5rem] items-center rounded-full bg-black hover:bg-teal-900 text-white text-xs uppercase'
+              className="flex gap-3 px-5 py-[0.5rem] items-center rounded-full bg-black hover:bg-teal-900 text-white text-xs uppercase"
             >
-              <Icon icon='mdi:tray-download' className='text-lg' />
+              <Icon icon="mdi:tray-download" className="text-lg" />
               <span>{ctaButtonLabel}</span>
             </button>
             <SocialIconNav
               socialMediaProfiles={socialMediaProfiles}
-              iconClassNames='text-4xl hover:text-teal-900'
+              iconClassNames="text-4xl hover:text-teal-900"
             />
           </div>
         </div>
-        <div className='md:order-2'>
+        <div className="md:order-2">
           <MarkdownContent content={sectionText1} />
+
+          <p style={{fontFamily: "Whisper, sans-serif"}} className="mt-8 ml-8 text-7xl leading-[0.75]">
+            <span>John</span><br />
+            <span className="ml-16">Doe</span>
+          </p>
+
         </div>
-        <div className='md:order-4'>
+        <div className="md:order-4">
           <Skills skills={skills} />
         </div>
-        <div className='md:order-3 self-center'>
+        <div className="md:order-3 self-center">
           <ContactInfo contactInfo={personalInfo} />
         </div>
       </div>

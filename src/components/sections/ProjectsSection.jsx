@@ -34,7 +34,7 @@ function ProjectsSection({ props }) {
 
   const displayTemplate = (
     <>
-      <div className='grid gap-4 sm:gap-8 sm:grid-cols-2'>
+      <div className="grid gap-4 sm:gap-8 sm:grid-cols-2">
         {entries.map((entry) => (
           <div key={entry.id}>
             <Link to={"/project/" + entry.slug}>
@@ -46,18 +46,17 @@ function ProjectsSection({ props }) {
     </>
   );
 
-
   return (
     // Container für die ProjectsSection
-    <section className='bg-teal-950 px-4 py-8' id="projects">
-      <div className='container mx-auto flex flex-col place-items-center text-center mt-12 mb-36'>
+    <section className="bg-teal-950 px-4 py-8" id="projects">
+      <div className="container mx-auto flex flex-col place-items-center text-center mt-12 mb-36">
         {/* Experience With Schriftzug */}
-        <p className='text-gray-400 uppercase font-semibold text-xl drop-shadow-lg mb-4'>
+        <p className="text-gray-400 uppercase font-semibold text-xl drop-shadow-lg mb-4">
           {subTitle}
         </p>
         <Experience experience={experience} />
         {/* Projects Schriftzug */}
-        <h1 className='text-white text-3xl uppercase font-bold mb-12 mt-6 drop-shadow-lg'>
+        <h1 className="text-white text-3xl uppercase font-bold mb-12 mt-6 drop-shadow-lg">
           {title}
         </h1>
         {loading ? loadingTemplate : displayTemplate}
