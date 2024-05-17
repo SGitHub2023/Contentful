@@ -1,5 +1,6 @@
 import HTMLContent from "../helper/HTMLContent";
 import Contact from "../routes/Contact";
+import { Link } from "react-router-dom";
 
 function HeroSection({ props }) {
   const {
@@ -20,7 +21,7 @@ function HeroSection({ props }) {
 
   return (
     <section
-      className="bg-teal-950 min-h-screen flex items-center px-4"
+      className="bg-teal-950 min-h-screen flex items-center px-4 relative overflow-hidden"
       style={{
         backgroundImage: `url("src/components/images/HeroSwoosh.png")`,
         backgroundPosition: "center",
@@ -38,7 +39,7 @@ function HeroSection({ props }) {
                 }
               `}
             </style>
-            <h1 className="text-7xl font-italic leading-tight mb-4 title-font text-white mx-8">
+            <h1 className="text-7xl font-italic leading-tight mb-4 title-font text-white mx-8 slide-in-left">
               <HTMLContent content={title} className="title-font" />
             </h1>
             <h2 className="text-6xl font-extrabold mb-10 text-white mx-8">
@@ -47,13 +48,13 @@ function HeroSection({ props }) {
             <p className="text-xl font-italic mb-20 text-white mx-8">
               {sectionText1}
             </p>
-
-            <button
-              className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 px-4 rounded justify-center mx-8"
-              onClick={openContactForm}
+            <Link
+              className="hover:bg-emerald-700 text-white font-bold py-3 px-6 rounded-full justify-center mx-8 items-center rounded-full border-white border-2 text-sm md:text-base uppercase shadow-lg"
+              role="button"
+              to="/contact"
             >
               {ctaButtonLabel}
-            </button>
+            </Link>
           </div>
 
           <div className="">
@@ -65,7 +66,7 @@ function HeroSection({ props }) {
                   alt="John Doe"
                 />
               </div>
-              <div className="bg-white rounded-lg p-4 text-black text-center absolute bottom-0 left-0 z-10">
+              <div className="bg-white rounded-lg p-4 text-black text-center absolute bottom-0 left-0 z-10 fade-in delay-1s shadow-xl">
                 <h3 className="text-xl font-bold mb-2">
                   Fullstack <br />
                   Web & App <br />

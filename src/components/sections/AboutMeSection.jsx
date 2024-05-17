@@ -24,28 +24,26 @@ function AboutMeSection({ props }) {
   };
 
   return (
-    <section className='about-me-section mt-4' id='about-me'>
-      <div className='container grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12 md:gap-y-20 py-12 md:py-16'>
-        <div className='md:order-1'>
-          {/* About Me Schriftzug */}
-          <h2 className='text-5xl font-extrabold mb-4'>{title}</h2>
-          {/* I like creating cool Schriftzug */}
-          <p className='text-3xl font-light mt-5'>{subTitle}</p>
-          <div className='flex gap-8 items-center mt-12'>
+    <section className="about-me-section" id="about-me">
+      <div className="container grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12 md:gap-y-20 py-12 md:py-16">
+        <div className="md:order-1">
+          <h2 className="text-3xl font-bold mb-2">{title}</h2>
+          <p>{subTitle}</p>
+          <div className="flex gap-8 items-center mt-12">
             <button
               onClick={downloadCV}
-              className='flex gap-3 px-5 py-[0.5rem] items-center rounded-full bg-black hover:bg-teal-900 text-white text-xs uppercase mt-12'
+              className="flex gap-3 px-5 py-[0.5rem] items-center rounded-full bg-black hover:bg-teal-900 text-white text-xs uppercase"
             >
-              <Icon icon='mdi:tray-download' className='text-lg' />
+              <Icon icon="mdi:tray-download" className="text-lg" />
               <span>{ctaButtonLabel}</span>
             </button>
             <SocialIconNav
               socialMediaProfiles={socialMediaProfiles}
-              iconClassNames='text-4xl hover:text-teal-900 mt-12'
+              iconClassNames="text-4xl hover:text-teal-900"
             />
           </div>
         </div>
-        <div className='md:order-2'>
+        <div className="md:order-2">
           <MarkdownContent content={sectionText1} />
 
           <p style={{fontFamily: "Whisper, sans-serif"}} className="mt-8 ml-8 text-7xl leading-[0.75]">
@@ -54,10 +52,10 @@ function AboutMeSection({ props }) {
           </p>
 
         </div>
-        <div className='md:order-4'>
+        <div className="md:order-4">
           <Skills skills={skills} />
         </div>
-        <div className='md:order-3 self-center'>
+        <div className="md:order-3 self-center">
           <ContactInfo contactInfo={personalInfo} />
         </div>
       </div>
