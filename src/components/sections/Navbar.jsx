@@ -25,7 +25,7 @@ function Navbar({ props }) {
     setIsOpen(false);
   };
 
-  const HomeLink = () => {
+  const linkTop = () => {
     closeNav();
     window.scrollTo({ top: 0 });
   };
@@ -50,7 +50,7 @@ function Navbar({ props }) {
       <li>
         <Link
           to='/'
-          onClick={HomeLink}
+          onClick={linkTop}
           className='font-semibold text-lg hover:text-teal-950'
         >
           Home
@@ -79,7 +79,7 @@ function Navbar({ props }) {
       <li>
         <Link
           to='/contact'
-          onClick={closeNav}
+          onClick={linkTop}
           className='font-semibold text-lg hover:text-teal-950'
         >
           Contact

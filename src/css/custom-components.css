@@ -11,7 +11,7 @@
 .mobile-nav {
   @apply absolute bottom-0 left-0 w-full bg-teal-700 z-0 transition-all duration-75 px-4 py-1;
   &.is-open {
-    @apply -bottom-[168px] transition-all duration-75;
+    @apply -bottom-[184px] transition-all duration-75;
   }
   & ul li {
     @apply py-2 border-b border-white/50 last:border-none;
