@@ -45,20 +45,12 @@ function AboutMeSection({ props }) {
         </div>
         <div className="md:order-2">
           <MarkdownContent content={sectionText1} />
-          <p
-            style={{
-              fontFamily: "Whisper, sans-serif",
-              fontSize: "5rem",
-              margin: "0",
-              padding: "0",
-            }}
-          >
-            <span style={{ marginRight: "20px", lineHeight: "0.75" }}>
-              John
-            </span>
-            <br />
-            <span style={{ marginLeft: "150px", lineHeight: "0.75" }}>Doe</span>
+
+          <p style={{fontFamily: "Whisper, sans-serif"}} className="mt-8 ml-8 text-7xl leading-[0.75]">
+            <span>John</span><br />
+            <span className="ml-16">Doe</span>
           </p>
+
         </div>
         <div className="md:order-4">
           <Skills skills={skills} />
