@@ -24,12 +24,13 @@ function AboutMeSection({ props }) {
   };
 
   return (
-    <section className="about-me-section" id="about-me">
-      <div className="container grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12 md:gap-y-20 py-12 md:py-16">
-        <div className="md:order-1">
-          <h2 className="text-3xl font-bold mb-2">{title}</h2>
-          <p>{subTitle}</p>
-          <div className="flex gap-8 items-center mt-12">
+    <section className='about-me-section' id='about-me'>
+      <div className='container grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12 md:gap-y-20 py-12 md:py-16'>
+        <div className='md:order-1'>
+          <h2 className='text-5xl font-bold mb-3'>{title}</h2>
+          <p className='text-3xl font-light'>{subTitle}</p>
+          <div className='flex gap-8 items-center mt-12 '>
+
             <button
               onClick={downloadCV}
               className="flex gap-3 px-5 py-[0.5rem] items-center rounded-full bg-black hover:bg-teal-900 text-white text-xs uppercase"
