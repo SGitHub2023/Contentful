@@ -23,7 +23,7 @@ function HeroSection({ props }) {
     <section
       className="bg-teal-950 min-h-screen flex items-center px-4 relative overflow-hidden"
       style={{
-        backgroundImage: `url("src/components/images/HeroSwoosh.png")`,
+        backgroundImage: `url("./src/assets/HeroSwoosh.png")`,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
